@@ -84,6 +84,7 @@ if __name__ == "__main__":
     epd = driver.EPD_7in5_B()
 
     update_display(epd)
+    print("waiting 60 seconds...")
+    utime.sleep(60)
     print(f"Going to deep sleep for {refresh_period_min} min")
-    utime.sleep(2)
     deepsleep(refresh_period_ms)
